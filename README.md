@@ -19,8 +19,8 @@ sequenceDiagram
   Client->>Server: User submits login form
   Server->>Database: Request relevant user info including encrypted password from database
   Database->>Server: Send requested info back to server
-  Server->>Server: Validate form
   Server->>Server: Take plaintext password from form and encrypt it using the same algorithm used in registration
   Server->>Server: Compare newly encrypted form password against encrypted password from db
+  Server->>Server: Validate form
   Server->>Client: Respond with success/failure action
 ```
