@@ -8,7 +8,7 @@ sequenceDiagram
   Client->>Server: User submits registration form
   Server->>Server: Validate form
   Server->>Server: Take plaintext password and encrypt it using an encryption algorithm/library like bcrypt
-  Server->>Database: Trigger INSERT query
+  Server->>Database: Trigger INSERT query and store all data with encrypted password
   Database->>Server: Notify server that INSERT has been committed
   Server->>Client: Redirect or success action
 ```
